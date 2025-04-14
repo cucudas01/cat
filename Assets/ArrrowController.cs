@@ -30,6 +30,9 @@ public class ArrrowController : MonoBehaviour
 
         if (distance < radius1 + radius2)
         {
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreaseHP();
+
             Destroy(gameObject);
             
         }
